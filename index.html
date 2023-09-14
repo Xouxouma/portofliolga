@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Olga Gavrysh</title>
+    <!-- Link to Bootstrap CSS -->
+    <link
+      rel="stylesheet"
+      href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+    />
+    <!-- Link to Bootstrap JavaScript and jQuery (required for Bootstrap functionality) -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <!-- masonry -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/masonry/4.2.2/masonry.pkgd.min.js"></script>
+    <script src="src\lib\unpkg.com_imagesloaded@5.0.0_imagesloaded.pkgd.min.js"></script>
+    <!-- Link to custom CSS file-->
+    <link rel="stylesheet" href="style/index.css" />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <header id="header">
+      <script src="components/navbar/navbar.js"></script> <!-- Include the shared JavaScript file -->
+    </header>
+
+    <main>
+      <section class="">
+        <div class="jumbotron">
+          <h1 class="display-4">Olga Gavrysh</h1>
+          <p class="lead">
+            I'm the best, because my boyfriend says so. Let me show you my work
+          </p>
+        </div>
+      </section>
+
+      <section class="content">
+        <div class="portfolio-filters">
+          <button class="portfolio-filter-button active" data-filter="all">
+            All
+          </button>
+          <button class="portfolio-filter-button" data-filter="ux-design">
+            UX Design
+          </button>
+          <button class="portfolio-filter-button" data-filter="art">Art</button>
+          <button class="portfolio-filter-button" data-filter="graphic-design">
+            Graphic Design
+          </button>
+        </div>
+        <!-- <div class="container"> -->
+
+          <div class="portfolio-grid" id="portfolio-grid-container">
+            <div class="grid-sizer"></div> <!-- Specify the column width -->
+            <!-- Portfolio items instanciated in js -->
+          </div>
+        <!-- </div> -->
+      </section>
+    </main>
+
+    <footer class="bg-dark text-light text-center py-3">
+      <p>&copy; Olga Gavrysh</p>
+    </footer>
+
+    <!-- Link to custom js -->
+    <script src="src/index.js"></script>
+  </body>
+</html>

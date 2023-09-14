@@ -1,0 +1,141 @@
+/* Define color constants */
+/* :root {
+    --color-art: rgb(96, 193, 83);
+    --color-art-rgb: 96, 193, 83;
+    --color-ux: rgb(51, 163, 188);
+    --color-ux-rgb: 51, 163, 188;
+    --color-graphic: rgb(187, 91, 158);
+    --color-graphic-rgb: 187, 91, 158;
+  } */
+
+/* Style the card body */
+.portfolio-item .card-body {
+    position: absolute;
+    top: 100%; /* Initially, push it below the card */
+    left: 0;
+    width: 100%;
+    height: 100%; /* Take the full size of the portfolio-item */
+    background-color: rgba(44, 45, 45, 0.849); /* Adjust the color and opacity here */
+    color: #fff; /* Text color */
+    transition: opacity 0.3s; /* Add a transition effect */
+    opacity: 0; /* Initially hidden */
+    top: 0; /* on top of the card */
+    /* center it */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.content {
+    margin: 2%;
+}
+/* .portfolio-item.graphic-design .card-body {
+    background-color: rgba(var(--color-graphic-rgb), 0.3);
+}
+.portfolio-item.art .card-body {
+    background-color: rgba(var(--color-art-rgb), 0.3);
+}
+.portfolio-item.ux-design .card-body {
+    background-color: rgba(var(--color-ux-rgb), 0.3);
+} */
+
+/* Apply the hover effect */
+.portfolio-item:hover .card-body {
+    opacity: 1; /* Show the card body on hover */
+    transition: opacity 0.3s;
+    background-color: rgba(44, 45, 45, 0.849);
+    cursor: pointer;
+}
+
+.portfolio-filters {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Style the filter buttons */
+/* Style for filter buttons */
+.portfolio-filter-button {
+    background-color: transparent;
+    /* border-radius: 5px; */
+    /* border: 2px solid #333; */
+    border: none;
+    color: #333;
+    padding: 10px 20px;
+    margin: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+/* Hover effect */
+.portfolio-filter-button:hover {
+    border-bottom: 2px solid #333;
+    /* background-color: #333; */
+    /* color: #fff; */
+}
+/* .portfolio-filter-button[data-filter="ux-design"] {
+    border-color: var(--color-ux);
+}
+.portfolio-filter-button[data-filter="art"] {
+    border-color: var(--color-art);
+}
+.portfolio-filter-button[data-filter="graphic-design"] {
+    border-color: var(--color-graphic);
+} */
+
+/* Active (selected) filter button */
+.portfolio-filter-button.active {
+    /* background-color: #333;
+    color: #fff;
+    border-color: #333; */
+    font-weight: bold;
+}
+
+/* Add transition property for smooth opacity changes */
+.portfolio-item {
+    /* display: block; */
+    opacity: 1;
+    /* transition: opacity 0.3s ease-in-out; */
+}
+
+/* Add a class to hide items */
+.hidden {
+    display: none !important;
+    opacity: 0;
+    transition: opacity 0.3s ease-in-out,  display 0.3s ease-in-out;
+}
+
+/* Style the grid container */
+.portfolio-grid {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between; /* Adjust as needed */
+} 
+
+/* Style individual grid items */
+.portfolio-item {
+    width: 100%; /* Default width for all items */
+    margin-bottom: 20px; /* Adjust margin as needed */
+}
+
+/* Define column width for different screen sizes */
+@media (min-width: 576px) {
+    .portfolio-item {
+        width: calc(50% - 10px); /* Two columns on small screens */
+    }
+}
+
+@media (min-width: 768px) {
+    .portfolio-item {
+        width: calc(33.33% - 20px); /* Three columns on medium screens */
+    }
+}
+
+@media (min-width: 992px) {
+    .portfolio-item {
+        width: calc(25% - 20px); /* Four columns on large screens */
+    }
+}

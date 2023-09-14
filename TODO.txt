@@ -1,0 +1,5 @@
+- Right side for bar
+- Over effects for images
+- Tabs filters (instead of Portfolio)
+- Details page for projects
+- Automatic load pictures from folders
