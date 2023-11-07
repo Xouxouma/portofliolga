@@ -34,13 +34,11 @@ for (let i = 0; i < cards.length; i++) {
     
     // Create the card's HTML structure using a template string
     cardElement.innerHTML = `
-        <div class="">
-            <img src="assets\\portfolio-items\\${card.category}\\${card.path}.jpg" class="card-img-top" alt="Portfolio Item ${i + 1}">
+            <img src="assets\\portfolio-items\\${card.category}\\${card.path}.jpg" class="card-img-bg" alt="Portfolio Item ${i + 1}">
             <div class="card-body">
                 <h5 class="card-title">${card.title}</h5>
                 <h6 class="card-title">${card.subtitle}</p>
             </div>
-        </div>
     `;
 
     // Append the card element to the container
@@ -62,16 +60,16 @@ for (let i = 0; i < cards.length; i++) {
 }
 
 // Initialize Masonry
-var masonry;
-imagesLoaded(container, function () {
-    masonry = new Masonry('.portfolio-grid', {
-        itemSelector: '.portfolio-item',
-        // columnWidth: '.grid-sizer',
-        columnWidth: '.portfolio-item:not(.hidden)',
-        gutter: 20, // Adjust gutter size as needed
-    })
-    masonry.layout();
-});
+// var masonry;
+// imagesLoaded(container, function () {
+//     masonry = new Masonry('.portfolio-grid', {
+//         itemSelector: '.portfolio-item',
+//         // columnWidth: '.grid-sizer',
+//         columnWidth: '.portfolio-item:not(.hidden)',
+//         gutter: 20, // Adjust gutter size as needed
+//     })
+//     masonry.layout();
+// });
 
 // Get all filter buttons
 const filterButtons = document.querySelectorAll('.portfolio-filter-button');
@@ -102,6 +100,6 @@ filterButtons.forEach(button => {
             }
         });
 
-        masonry.layout();
+        // masonry.layout();
     });
 });
